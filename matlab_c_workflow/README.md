@@ -56,3 +56,7 @@ result = run_matlab_c_workflow('robust', scenarios, solveFcn, evaluateFcn, cfg);
 5. 使用 runtests('tests/test_c_workflow_core.m') 运行测试。
 
 论文数字审计要求输入 Markdown 或已提取的纯文本；它不会假装可靠地解析复杂 DOCX/PDF 排版。
+
+## 文件格式协议
+
+本工作流默认输出 Markdown、LaTeX、PDF 矢量图、CSV 和原始 MATLAB .m 文件。Markdown 是论文源稿，PDF 是最终编译稿；不生成 Word 源稿。MATLAB 图形优先使用 exportgraphics 的 vector 模式，表格和结果数字只写入 CSV，附录直接引用实际运行的 .m 文件。
